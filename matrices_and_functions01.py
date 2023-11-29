@@ -46,11 +46,11 @@ def plot_func_dep(f, a, b):
     # График производной
     plt.plot(x[:-1], df * 100)
     # Ось ох
-    plt.plot([x, np.array([0 for i in range(a, b)])])
-    # Точки где наклон графика функции самый крутой
+    plt.plot(x, np.array([0 for i in range(a, b)]))
+    # Точки, где наклон графика функции самый крутой
     plt.plot([x[i] for i in depr_max], [y[i] for i in depr_max], 'go')
 
-    # Точки где плато или самый пологий угл
+    # Точки, где плато или самый пологий угл
     plt.plot([x[i] for i in depr_zero], [y[i] for i in depr_zero], 'ro')
     plt.show()
 
